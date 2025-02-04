@@ -1,36 +1,13 @@
 import {ReactElement, useState, useEffect, useRef, createElement} from "react";
-import {View, AppState, ViewStyle, TextStyle} from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage"; // For storing timestamps
+import {View, AppState} from "react-native";
+
 import {AppEventListenerProps} from "../typings/AppEventListenerProps";
-import {Style, mergeNativeStyles} from "@mendix/pluggable-widgets-tools";
 
-declare const mx: any; // Mendix global object
-export interface CustomStyle extends Style {
-    container: ViewStyle;
-    label: TextStyle;
-}
+declare const mx: any;
 
-const defaultStyle: CustomStyle = {
-    container: {
-        flex: 1,
-        width: "100%",
-        alignItems: "center",
-        justifyContent: "center",
-        zIndex: 1000000,
-        height: 700
-    },
-    label: {
-        fontSize: 14,
-        color: "red"
-    }
-}
-
-export function AppEventListener(props: AppEventListenerProps<CustomStyle>): ReactElement {
-    // const { onExit, onResume } = props;
+export function AppEventListener(props: AppEventListenerProps<{}>): ReactElement {
     const [appState, setAppState] = useState(AppState.currentState);
     const appStateRef = useRef(AppState.currentState);
-    const styles = mergeNativeStyles(defaultStyle, props.style);
-    console.log(styles)
     useEffect(() => {
         const onAppStateChange = async (nextAppState: any) => {
             console.error(`App State Change : ${appStateRef.current} → ${nextAppState}`);
