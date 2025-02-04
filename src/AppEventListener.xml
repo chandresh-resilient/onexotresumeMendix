@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="resilientitservices.appeventlistener.AppEventListener" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Native"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>App Event Listener</name>
+    <description>My widget description</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="delay" type="integer" defaultValue="30">
+                <caption>Delay</caption>
+                <description></description>
+            </property>
+            <property key="reloadtime" type="integer" defaultValue="3000">
+                <caption>Reload Time Android</caption>
+                <description></description>
+            </property>
+            <property key="reloadtimeIos" type="integer" defaultValue="3000">
+                <caption>Reload Time IOS</caption>
+                <description></description>
+            </property>
+            <property key="onResume" type="action">
+                <caption>On Resume</caption>
+                <description>Action to be performed On Resume</description>
+            </property>
+            <property key="onExit" type="action">
+                <caption>On Exit</caption>
+                <description>Action to be performed on Exit</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
