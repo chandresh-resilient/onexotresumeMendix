@@ -11,8 +11,8 @@ export function AppEventListener(props: AppEventListenerProps<{}>): ReactElement
     const appStateRef = useRef(AppState.currentState);
     useEffect(() => {
         const onAppStateChange = async (nextAppState: any) => {
-            console.error(`App State Change : ${appStateRef.current} → ${nextAppState}`);
-            console.error('AppState',appState)
+           // console.error(`App State Change : ${appStateRef.current} → ${nextAppState}`);
+           // console.error('AppState',appState)
 
             if (appStateRef.current.match(/inactive|background/) && nextAppState === "active") {
                 // App comes to foreground, check if more than 15 sec has passed
@@ -37,7 +37,7 @@ export function AppEventListener(props: AppEventListenerProps<{}>): ReactElement
                     }
                 }
             } else{
-                console.error("App is going to the background!");
+                //console.error("App is going to the background!");
                 let fontScale = Dimensions.get("window").fontScale;
                 let rounded = Math.round(fontScale * 100) / 100;
                 await AsyncStorage.setItem("backgroundTimestamp", Date.now().toString()); // Store time

@@ -10,8 +10,6 @@ export interface AppEventListenerProps<Style> {
     name: string;
     style: Style[];
     delay: number;
-    reloadtime: number;
-    reloadtimeIos: number;
     onResume?: ActionValue;
     onExit?: ActionValue;
 }
@@ -28,8 +26,6 @@ export interface AppEventListenerPreviewProps {
     renderMode: "design" | "xray" | "structure";
     translate: (text: string) => string;
     delay: number | null;
-    reloadtime: number | null;
-    reloadtimeIos: number | null;
     onResume: {} | null;
     onExit: {} | null;
 }
