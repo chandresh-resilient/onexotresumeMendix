@@ -1,4 +1,4 @@
-import { AppEventListenerPreviewProps } from "../typings/AppEventListenerProps";
+import {AppEventListenerPreviewProps} from "../typings/AppEventListenerProps";
 
 export type Platform = "web" | "desktop";
 

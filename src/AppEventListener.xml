@@ -13,14 +13,6 @@
                 <caption>Delay</caption>
                 <description></description>
             </property>
-            <property key="reloadtime" type="integer" defaultValue="3000">
-                <caption>Reload Time Android</caption>
-                <description></description>
-            </property>
-            <property key="reloadtimeIos" type="integer" defaultValue="3000">
-                <caption>Reload Time IOS</caption>
-                <description></description>
-            </property>
             <property key="onResume" type="action">
                 <caption>On Resume</caption>
                 <description>Action to be performed On Resume</description>
